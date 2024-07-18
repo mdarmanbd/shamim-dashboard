@@ -32,13 +32,13 @@
                             talently
                         </h4>
                     </div>
-                    <div class="dashboard flex">
-                        <img src="./asset/img/dashboard.svg">
-                        <h5 class="title">
-                            Dashboard
-                        </h5>
-                    </div>
-                    <ul>
+                    <ul class="unorder-list">
+                        <li class="dashboard flex">
+                            <img src="./asset/img/dashboard.svg">
+                            <h5 class="title">
+                                Dashboard
+                            </h5>
+                        </li>
                         <li class="mt-20 cursor-pointer list">
                             <div onclick="isEmployesOpen(this)" class="flex Checklist">
                                 <img class="svg-icon" src="./asset/img/person.svg">
@@ -346,8 +346,8 @@
                                 </div>
                             </div>
                             <div id="mobileMenu" class="toggled-mobile-menu d-flex w-full">
-                                <div class="w-80 pt-2 overflow-y">
-                                    <div class="flex">
+                                <div class="w-80 pt-2 ">
+                                    <div class="flex py-2 ">
                                         <div class="flex">
                                             <img class="pl-10" src="./asset/img/logo.svg">
                                             <h6 class="brand-name ">
@@ -359,7 +359,7 @@
                                         </button>
                                     </div>
                                     <div class="px-2">
-                                        <ul class="">
+                                        <ul class="mobile-under-list">
                                             <li class="mt-20 cursor-pointer list">
                                                 <div onclick="isEmployesOpen(this)" class="flex Checklist">
                                                     <img class="svg-icon" src="./asset/img/person.svg">
@@ -674,17 +674,41 @@
                             </div>
                         </div>
                        <div class="nav-icon flex d-none d-sm-noen d-md-none d-lg-flex">
-                            <a href="#" class="icon-link">
-                                <i class="fas fa-globe color-base text-15"></i>
-                            </a>
-                            <a href="#" class="icon-link">
+                            <div class="icon-link cursor-pointer" onclick="toggleDropdown(event, 'webDropdown')">
+                                <i class="fas fa-globe color-base text-15 "></i>
+                                <div id="webDropdown" class="web-dropdown" onclick="event.stopPropagation()">
+                                    <p class="web-dropdown-name">
+                                        Tension Jhon
+                                    </p>
+                                    <p class="web-dropdown-name">
+                                        Brogo Michel
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="icon-link cursor-pointer" onclick="toggleDropdown(event, 'dotsDropdown')">
                                 <i class="far fa-comment-dots color-base text-15"></i>
-                            </a>
-                            <a href="#" class="icon-link bell-icon">
-                                <i class="far fa-bell color-base text-15"></i>
-                            </a>
+                                <div id="dotsDropdown" class="web-dropdown" onclick="event.stopPropagation()">
+                                    <p class="web-dropdown-name">
+                                        Michel Jhon
+                                    </p>
+                                    <p class="web-dropdown-name">
+                                        Hello Michel
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="icon-link bell-icon cursor-pointer" onclick="toggleDropdown(event, 'bellDropdown')">
+                                <i class="far fa-bell color-base text-15 cursor-pointer"></i>
+                                <div id="bellDropdown" class="web-dropdown" onclick="event.stopPropagation()">
+                                    <p class="web-dropdown-name">
+                                        Jiban Jhon
+                                    </p>
+                                    <p class="web-dropdown-name">
+                                        Digo Michel
+                                    </p>
+                                </div>
+                            </div>
                        </div>
-                       <div class="odama flex cursor-pointer d-none d-sm-none d-md-flex d-lg-flex">
+                       <div class="odama flex cursor-pointer d-none d-sm-none d-md-flex d-lg-flex position-relative" onclick="toggleDropdown(event, 'studioDropdown')">
                             <p>
                                 Odarma Studio
                             </p>
@@ -692,6 +716,15 @@
                                 <i class="text-white text-15 fas fa-fire"></i>
                             </span>
                             <i class="fas fa-caret-down color-base text-15 pl-5"></i>
+
+                            <div id="studioDropdown" class="web-dropdown" onclick="event.stopPropagation()">
+                                <p class="web-dropdown-name">
+                                    Hello Jhon
+                                </p>
+                                <p class="web-dropdown-name">
+                                    Mithu Michel
+                                </p>
+                            </div>
                        </div>
                     </header>
                      <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

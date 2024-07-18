@@ -108,7 +108,33 @@ button:hover i {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
+
+.web-dropdown{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 150px;
+    height: 60px;
+    border: 1px solid gray;
+    background-color: white;
+    z-index: 1;
+    border-radius: 5px;
+    padding: 5px;
+    display: none;
+}
+.web-dropdown-name {
+    font-size: 14px;
+    color: #374151;
+    font-weight: 400;
+    line-height: 18px;
+    padding-top: 5px;
+}
+
+/* .web-dropdown.show {
+    display: block; 
+} */
 
 .icon-link i {
     text-align: center;

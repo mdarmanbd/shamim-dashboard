@@ -107,3 +107,38 @@ function humbargerBtn() {
 function closeBtn() {
     document.getElementById('mobileMenu').classList.remove('active');
 }
+
+
+function toggleDropdown(event, dropdownId) {
+    event.stopPropagation();
+    const dropdowns = document.querySelectorAll('.web-dropdown');
+    const currentDropdown = document.getElementById(dropdownId);
+
+    dropdowns.forEach(dropdown => {
+        if (dropdown !== currentDropdown) {
+            dropdown.style.display = 'none';
+        }
+    });
+
+
+    currentDropdown.style.display = currentDropdown.style.display === 'none' || currentDropdown.style.display === '' ? 'block' : 'none';
+}
+
+document.addEventListener("click", function(event) {
+    const dropdowns = document.querySelectorAll('.web-dropdown');
+    const iconLinks = document.querySelectorAll('.icon-link');
+
+    let clickedInside = false;
+
+    iconLinks.forEach(iconLink => {
+        if (iconLink.contains(event.target)) {
+            clickedInside = true;
+        }
+    });
+
+    if (!clickedInside) {
+        dropdowns.forEach(dropdown => {
+            dropdown.style.display = 'none';
+        });
+    }
+});
