@@ -108,7 +108,12 @@ button:hover i {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease;
     position: relative;
+}
+
+.icon-link:hover {
+    background-color: #e1e1e1;
 }
 
 .web-dropdown{
@@ -116,12 +121,11 @@ button:hover i {
     top: 40px;
     left: 0;
     width: 150px;
-    height: 60px;
     border: 1px solid gray;
     background-color: white;
     z-index: 1;
     border-radius: 5px;
-    padding: 5px;
+    padding: 6px 5px 6px 10px;
     display: none;
 }
 .web-dropdown-name {
@@ -155,15 +159,20 @@ button:hover i {
     background-color: red;
 }
 
-
-
 .odama p {
     font-size: 14px;
     color: #374151;
     font-weight: 500;
     line-height: 18px;
     margin-right: 5px;
-} 
+    width: 110px;
+    transition: all 0.3s ease;
+}
+
+.odama p:hover {
+    color: rgb(199, 20, 20);
+    font-size: 14px;
+}
 
 .fire{
     width: 30px;

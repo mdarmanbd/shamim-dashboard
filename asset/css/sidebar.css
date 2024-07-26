@@ -78,6 +78,7 @@ aside{
     padding-left: 18px;
     line-height: 20px;
 }
+
 .unorder-list{
     height: 73vh;
     overflow-y: auto;
@@ -109,7 +110,7 @@ li{
     background-color: rgb(229, 229, 229);
 }
 
-.Checklist{
+/* .Checklist{
     position: relative;
 }
 
@@ -122,7 +123,7 @@ li{
     width: 1.5px;
     height: 0px;
     transition: height 0.2s ease-out;
-}
+} */
 
 .Checklist.open::before {
     height: 170px; 
@@ -145,8 +146,47 @@ li{
    
 }
 
-.sub-menu-list{
+ .first-sub-menu-list, .sub-menu-list{
     position: relative; 
+}
+
+.first-sub-menu-list a {
+    padding: 8px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.first-sub-menu-list a:hover i{
+    color: white;
+}
+
+.first-sub-menu-list a:hover .sub-title{
+    color: white;
+}
+
+.first-sub-menu-list a:hover {
+    background-color: #2bdb6c; 
+}
+
+.first-sub-menu-list::before{
+    content: '';
+    position: absolute;
+    top: 26px;
+    left: 12px;
+    background-color: #6f6f6f;
+    width: 23px;
+    height: 0.5px;
+}
+
+.first-sub-menu-list::after{
+    content: '';
+    position: absolute;
+    top: 5px;
+    bottom: 0px;
+    left: 12px;
+    width: 0.5px;
+    height: 22px;
+    background-color: #6f6f6f;
 }
 
 
@@ -175,8 +215,19 @@ li{
     left: 12px;
     background-color: #6f6f6f;
     width: 23px;
-    height: 1px;
+    height: 0.5px;
 }
+
+.sub-menu-list::after {
+    content: '';
+    position: absolute;
+    top: -21px;
+    left: 12px;
+    width: 0.5px;
+    height: 48px;
+    background-color: #6f6f6f;
+}
+
 
 .sub-title{
     font-size: 14px;
