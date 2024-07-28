@@ -1,6 +1,7 @@
 .main{
     margin-top: 30px;
     margin-left: 30px;
+    position: relative;
 }
 
 .pl-10{
@@ -246,4 +247,17 @@ button:hover i {
 .bg-light-black{
     background-color: rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+}
+
+.addBtn {
+    width: 30px;
+    height: 30px;
+    background-color: #6a5df6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    position: absolute;
+    top: 85vh;
+    right: 40px;
 }
